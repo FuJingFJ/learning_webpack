@@ -27,9 +27,9 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif)$/, // 匹配图片
         use: [
-          'file-loader'
+          'file-loader' // 处理图片以及其路径
         ]
       }
     ]
