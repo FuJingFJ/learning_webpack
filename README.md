@@ -1,5 +1,13 @@
 ##### 创建步骤（空文件夹开始）
-
+0. 关联git 仓库
+```sh
+git init // 生成本地git项目
+git remote add origin XXXX //关联远程仓库 
+```
+0.1 在项目根目录下新建.gitignore文件，添加需要忽略的文件名
+```sh
+node_modules/
+```
 1. npm init 创建package.json
 ```sh
 npm init // bush下yarn init 会报错，所以还是用npm init 来生产好了
@@ -19,13 +27,11 @@ yarn add lodash --dev
 ```sh
 yarn add style-loader css-loader --dev
 ```
-并在config中配置module.rules
 
 4. 安装ExtractTextWebpackPlugin并增加config配置 // 分离文件
 ```sh
 yarn add extract-text-webpack-plugin --dev
 ```
-并在config中配置plugins和module
 
 5. 安装file-loader并增加config配置 // 处理图片
 ```sh
