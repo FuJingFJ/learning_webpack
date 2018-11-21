@@ -31,6 +31,12 @@ module.exports = {
         use: [
           'file-loader' // 处理图片以及其路径
         ]
+      },
+      {
+        test: /\.(woof|woof2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },

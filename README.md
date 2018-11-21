@@ -33,7 +33,7 @@ yarn add style-loader css-loader --dev
 yarn add extract-text-webpack-plugin --dev
 ```
 
-5. 安装file-loader并增加config配置 // 处理图片
+5. 安装file-loader并增加config配置 // 处理图片、文字
 ```sh
 yarn add file-loader --dev
 ```
