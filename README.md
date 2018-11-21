@@ -47,3 +47,8 @@ yarn add csv-loader xml-loader --dev
 ```sh
 yarn add html-webpack-plugin
 ```
+
+8. 安装clean-webpack-plugin， 并增加config配置， 在每次构建前清理dist文件
+```sh
+yarn add clean-webpack-plugin --dev
+```

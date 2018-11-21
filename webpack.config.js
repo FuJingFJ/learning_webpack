@@ -6,6 +6,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 // 将打包后的文件自动插入out文件中, 用新的html文件替换掉原来的，所以输出的index.html中的内容会被清空
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+// 每次构建前清理dist文件
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
 module.exports = {
   // entry string | object | array
   entry: {
@@ -67,6 +70,7 @@ module.exports = {
     new ExtractTextPlugin('style.css'),
     new HtmlWebpackPlugin({
       title: 'Out Management'
-    })
+    }),
+    new CleanWebpackPlugin(['dist'])
   ]
 }
