@@ -52,3 +52,8 @@ yarn add html-webpack-plugin
 ```sh
 yarn add clean-webpack-plugin --dev
 ```
+
+9. 安装webpack-dev-server，并增加config配置
+```sh
+yarn add webpack-dev-server --dev
+```

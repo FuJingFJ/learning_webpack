@@ -72,5 +72,13 @@ module.exports = {
       title: 'Out Management'
     }),
     new CleanWebpackPlugin(['dist'])
-  ]
+  ],
+  // 追踪警告,显示报错在哪一个原始文件内，也可以使用其他的配置
+  devtool: 'inline-source-map',
+  // 实时重新加载文件
+  devServer: {
+    contentBase: './dist',
+    // 警示提醒
+    clientLogLevel: 'warning'
+  }
 }
