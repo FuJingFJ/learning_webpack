@@ -37,3 +37,8 @@ yarn add extract-text-webpack-plugin --dev
 ```sh
 yarn add file-loader --dev
 ```
+
+6. 安装csv-loader 和 xml-loader处理CSV、TSV和XML，并增加config配置
+```sh
+yarn add csv-loader xml-loader --dev
+```
