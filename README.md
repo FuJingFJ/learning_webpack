@@ -42,3 +42,8 @@ yarn add file-loader --dev
 ```sh
 yarn add csv-loader xml-loader --dev
 ```
+
+7. 安装HtmlWebpackPlugin，并增加config配置，在index.html中插入生成的js
+```sh
+yarn add html-webpack-plugin
+```

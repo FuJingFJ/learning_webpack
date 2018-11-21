@@ -1,6 +1,10 @@
 const path = require('path')
+
 // 将入口中引用的'.css'移动到分离的CSS文件中，webpack4以上安装extract-text-webpack-plugin@next
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+// 将打包后的文件自动插入out文件中, 用新的html文件替换掉原来的，所以输出的index.html中的内容会被清空
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   // entry string | object | array
@@ -10,7 +14,7 @@ module.exports = {
   },
   output: {
     // filename: [id].[name].[hash].[chunkhash].[query].xxx.js
-    filename: '[name].bundle.js',
+    filename: '[id].[name].bundle.js',
     /** path.resolve([...paths])
      * @type {...paths} <string> 路径或路径片段的序列
      * return     {string} { 将路径或路径片段的序列处理为绝对路径 }
@@ -60,6 +64,9 @@ module.exports = {
   // 插件配置
   plugins: [
   // 只传字符串，为css的名字，也可以传入对象做配置
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    new HtmlWebpackPlugin({
+      title: 'Out Management'
+    })
   ]
 }
