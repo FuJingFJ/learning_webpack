@@ -3,9 +3,14 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  // entry string | object | array
+  entry: {
+    app: './src/index.js',
+    print: './src/print.js'
+  },
   output: {
-    filename: 'bundle.js',
+    // filename: [id].[name].[hash].[chunkhash].[query].xxx.js
+    filename: '[name].bundle.js',
     /** path.resolve([...paths])
      * @type {...paths} <string> 路径或路径片段的序列
      * return     {string} { 将路径或路径片段的序列处理为绝对路径 }
