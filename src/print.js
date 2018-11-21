@@ -1,4 +1,4 @@
 export default function printMe () {
-  console.log('I get called from print.js')
+  console.log('printjs is changing')
   // console.error('This is an error-test')
 }

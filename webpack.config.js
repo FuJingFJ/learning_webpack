@@ -9,11 +9,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 // 每次构建前清理dist文件
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
+// 模块热替换
+const webpack = require('webpack')
+
 module.exports = {
   // entry string | object | array
   entry: {
-    app: './src/index.js',
-    print: './src/print.js'
+    app: './src/index.js'
   },
   output: {
     // filename: [id].[name].[hash].[chunkhash].[query].xxx.js
@@ -71,7 +73,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Out Management'
     }),
-    new CleanWebpackPlugin(['dist'])
+    new CleanWebpackPlugin(['dist']),
+    // 以便更容易查看要修补(patch)的依赖
+    new webpack.NamedModulesPlugin(),
+    // 启用HRM热替换
+    new webpack.HotModuleReplacementPlugin()
   ],
   // 追踪警告,显示报错在哪一个原始文件内，也可以使用其他的配置
   devtool: 'inline-source-map',
@@ -79,6 +85,8 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     // 警示提醒
-    clientLogLevel: 'warning'
+    clientLogLevel: 'warning',
+    // 启用webpack的模块热替换
+    hot: true
   }
 }
