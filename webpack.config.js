@@ -33,19 +33,19 @@ module.exports = {
         ]
       },
       {
-        test: /\.(woof|woof2|eot|ttf|otf)$/,
+        test: /\.(woof|woof2|eot|ttf|otf)$/, // 匹配文字
         use: [
           'file-loader'
         ]
       },
       {
-        test: /\.(csv|tsv)$/,
+        test: /\.(csv|tsv)$/, // 匹配csv/tsv
         use: [
           'csv-loader'
         ]
       },
       {
-        test: /\.xml$/,
+        test: /\.xml$/, // 匹配xml
         use: [
           'xml-loader'
         ]

@@ -1,9 +1,0 @@
-@font-face {
-  font-family: 'MyFont';
-  src: url(33dc4ee0593cd48642de2f6441660bae.ttf);
-}
-.hello {
-  color: red;
-  font-size: 20px;
-  font-family: 'MyFont';
-}

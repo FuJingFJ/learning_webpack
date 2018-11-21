@@ -1,9 +1,0 @@
-@font-face {
-  font-family: 'MyFont';
-  src: url(./simyou.ttf);
-}
-.hello {
-  color: red;
-  font-size: 20px;
-  font-family: 'MyFont';
-}
